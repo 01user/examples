@@ -29,6 +29,12 @@ func setupRouter() *gin.Engine {
 		}
 	})
 
+	// list all users todo 将访问数据抽为接口，实现可为内存，可为数据访问
+	r.GET("/users", func(c *gin.Context) {
+
+		//c.JSON(http.StatusOK, gin.H{"user": user, "value": value})
+	})
+
 	// Authorized group (uses gin.BasicAuth() middleware)
 	// Same than:
 	// authorized := r.Group("/")
